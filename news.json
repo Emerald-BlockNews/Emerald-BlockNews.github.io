@@ -1,0 +1,17 @@
+{
+  "articles": [
+    {
+        "title": "The title for the article",
+        "subject": "Subject of the article like Villager #15 getting taken by M.I.C.E",
+        "author": "The name of the villager which is normally 'Villager #7' Or Jake ", 
+        "date": "1983, January 1'st",
+
+        "text": "This is basically where you make the actual article.",
+
+        "images": ["img/test.png"],
+
+        "context for images": "First, you need to send me the image first @Mlurey on discord so i can update the website. Then you add what I sent you, which should look like img/test.png or something"
+    }
+  ]
+}
+
