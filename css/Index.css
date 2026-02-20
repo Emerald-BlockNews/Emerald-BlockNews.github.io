@@ -1,0 +1,153 @@
+/* --- Fonts --- */
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('fonts/PixelOperator.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PixelOperatorB';
+    src: url('fonts/PixelOperator-Bold.ttf') format('truetype');
+}
+
+/* --- Global Text Shadow --- */
+h1, h2, h3, h4, h5, h6, p, .nav-btn {
+    text-shadow: 2px 2px 0 #000000;
+}
+
+/* --- Body --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PixelOperatorB', monospace;
+    background-image: url("../img/emerald_block.png");
+    background-repeat: repeat;
+    background-size: 128px;
+    image-rendering: pixelated;
+    color: white;
+    text-align: center;
+}
+
+/* --- Middle Container --- */
+.middle {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 60%;
+    margin: 50px auto;
+    min-height: 90vh;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- News Bar --- */
+#news-bar {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Ticker Animation --- */
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 25s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* --- Button Row Layout --- */
+.button-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* --- Styled Navigation Buttons --- */
+.nav-btn {
+    display: inline-block;
+    font-family: 'PixelOperatorB', monospace;
+    font-size: 1.1em;
+    color: white;
+    background-size: contain;
+    background-image: url("../img/emerald_block_middle.png");
+    background-repeat: repeat;
+    border: 4px solid #000000;
+    padding: 10px 22px;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #000000;
+    image-rendering: pixelated;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.nav-btn:hover {
+    background-image: url("../img/emerald_block.png");
+}
+
+.nav-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0 #000000;
+}
+
+/* --- Titles --- */
+.title {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* --- Images --- */
+.image-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* --- Paragraph --- */
+.intro {
+    max-width: 90%;
+    line-height: 1.5em;
+    margin-top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .middle {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    .image-container img {
+        width: 80%;
+    }
+
+    .button-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
